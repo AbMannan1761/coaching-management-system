@@ -1,16 +1,96 @@
-# React + Vite
+# 🎓 EduOne Coaching Management System (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+একটি আধুনিক, পূর্ণাঙ্গ এবং রেসপনসিভ কোচিং সেন্টার ও শিক্ষাপ্রতিষ্ঠান ম্যানেজমেন্ট সিস্টেম। এটি **[EduOne Coaching](https://coaching.eduone.com.bd/admin/dashboard)** এর ডিজাইন ও ওয়ার্কফ্লো অনুসরণ করে **React 18 + Vite** এবং কাস্টম ভ্যানিলা সিএসএস ডিজাইন সিস্টেমে তৈরি করা হয়েছে।
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 প্রধান মডিউল ও ফিচারসমূহ
 
-## React Compiler
+### ১. 📊 অ্যাডমিন ড্যাশবোর্ড (Analytics Dashboard)
+- **রিয়েল-টাইম মেট্রিক্স**: মোট শিক্ষার্থী, চলমান ব্যাচ, গড় উপস্থিতি হার (%), চলতি মাসের ফি আদায়, মোট বকেয়া এবং এসএমএস ব্যালেন্স।
+- **ভিজ্যুয়াল অ্যানালিটিক্স**: মাসিক আয়-ব্যয়ের বার চার্ট এবং উপস্থিতি রেশিও ডোনাট চার্ট।
+- **রুটিন ও ফিড**: আজকের ক্লাসের শিডিউল ও ক্লাসরুম এবং সাম্প্রতিক ফি জমার লাইভ হিস্ট্রি।
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ২. 👨‍🎓 শিক্ষার্থী ব্যবস্থাপনা (Student Management)
+- শিক্ষার্থী তালিকা, ব্যাচ ও শ্রেণি অনুযায়ী ফিল্টারিং ও লাইভ সার্চ।
+- নতুন শিক্ষার্থী ভর্তি ফর্ম (অটো আইডি, রোল, অভিভাবকের তথ্য ও মাসিক ফি/ছাড় নির্ধারণ)।
+- শিক্ষার্থীর পূর্ণাঙ্গ প্রোফাইল (ব্যক্তিগত তথ্য, ফি হিস্ট্রি এবং পরীক্ষার নম্বর)।
+- **ডিজিটাল স্টুডেন্ট আইডি কার্ড (Digital ID Card)** জেনারেটর ও সরাসরি প্রিন্ট সুবিধা।
 
-## Expanding the Oxlint configuration
+### ৩. 📚 ব্যাচ ও ক্লাস ব্যবস্থাপনা (Batches & Classes)
+- শ্রেণি ও বিষয়ভিত্তিক ব্যাচ গঠন, ক্লাসরুম এবং সময়সূচি (শিডিউল) নির্ধারণ।
+- লাইভ আসন পূরণ ট্র্যাকার (Capacity Progress Indicator)।
+- ব্যাচভিত্তিক শিক্ষার্থী তালিকা (Batch Roster) দেখার সুবিধা।
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### ৪. 📅 দৈনিক ব্যাচভিত্তিক হাজিরা (Attendance System)
+- ব্যাচ ও তারিখ অনুযায়ী শিক্ষার্থীদের উপস্থিতি নির্ধারণ (উপস্থিত, অনুপস্থিত, দেরি)।
+- এক ক্লিকে "সবাইকে উপস্থিত করুন" (Mark All Present)।
+- **স্বয়ংক্রিয় এসএমএস অ্যালার্ট**: অনুপস্থিত শিক্ষার্থীদের অভিভাবকদের মোবাইলে তাৎক্ষণিক এসএমএস নোটিফিকেশন।
+
+### ৫. 💳 ফি কালেকশন ও মানি রসিদ (Fee Collection & Billing)
+- সরাসরি কাউন্টার থেকে মাসিক টিউশন ফি, ভর্তি ফি বা শিট ফি আদায়।
+- একাধিক পেমেন্ট মেথড: বিকাশ (bKash), নগদ (Nagad), রকেট ও ক্যাশ পেমেন্ট ট্র্যাকিং।
+- **অফিসিয়াল প্রিন্টযোগ্য মানি রসিদ (Printable Money Receipt)**: অফিস কপি ও শিক্ষার্থী কপি সমন্বিত।
+
+### ৬. 💬 বাল্ক ও ডায়নামিক এসএমএস সেবা (Bulk SMS Gateway)
+- ব্যালেন্স ট্র্যাকিং ও বিভিন্ন রিচার্জ প্যাকেজ।
+- রেডিমেড ডায়নামিক টেমপ্লেট: অনুপস্থিতির নোটিশ, বকেয়া বেতনের তাগাদা, পরীক্ষার রুটিন এবং ছুটির নোটিশ।
+- এসএমএস আউটবক্স হিস্ট্রি লগ।
+
+### ৭. 🏆 পরীক্ষা ও ফলাফল (Exams & Results)
+- মডেল টেস্ট, সাপ্তাহিক ও মাসিক পরীক্ষার শিডিউল।
+- ব্যাচভিত্তিক নম্বর এন্ট্রি গ্রিড ও স্বয়ংক্রিয় গ্রেডিং (A+, A, A-, B, C, F)।
+- স্বয়ংক্রিয় মেধা তালিকা (Merit List) প্রস্তুতকরণ ও প্রিন্ট ভিউ।
+
+### ৮. 🚀 ৩-ধাপের EduOne রেজিস্ট্রেশন উইজার্ড (Onboarding Wizard)
+- EduOne সাইটের অনুরুপ ৩-ধাপের রেজিস্ট্রেশন:
+  1. প্রতিষ্ঠানের প্রাথমিক তথ্য (নাম, ফোন, ইমেইল, ঠিকানা)
+  2. সুপার অ্যাডমিন অ্যাকাউন্ট তৈরি
+  3. সাবস্ক্রিপশন প্ল্যান নির্বাচন (বেসিক, স্ট্যান্ডার্ড, প্রিমিয়াম)
+
+### ৯. 🌐 থিম ও বহুভাষিক সুবিধা (Bilingual & Multi-Theme)
+- **বাংলা ও ইংরেজি (Bangla & English)** এক ক্লিকে ভাষা পরিবর্তনের সুবিধা।
+- **ডার্ক মোড ও লাইট মোড (Dark/Light Mode)** থিম টগল।
+- মাল্টি-রোল সুইচার: অ্যাডমিন (👑), শিক্ষক (📚), এবং শিক্ষার্থী (🎓)।
+
+---
+
+## 🛠 টেকনোলজি স্ট্যাক
+
+- **Frontend**: React 18
+- **Bundler & Dev Server**: Vite
+- **Icons**: Lucide React
+- **Typography**: Google Fonts (Hind Siliguri & Inter)
+- **Styling**: Pure Modern CSS Design System (CSS Variables, Flexbox/Grid, Glassmorphism, Print Media Styles)
+- **Storage**: Browser LocalStorage Sync (ডেটা রিলোড করলেও সংরক্ষিত থাকে)
+
+---
+
+## 💻 প্রজেক্টটি লোকালি রান করার নিয়ম
+
+### ১. রিপোজিটরি ক্লোন করুন
+```bash
+git clone https://github.com/AbMannan1761/coaching-management-system.git
+cd coaching-management-system
+```
+
+### ২. ডিপেন্ডেন্সি ইন্সটল করুন
+```bash
+npm install
+```
+
+### ৩. ডেভেলপমেন্ট সার্ভার চালু করুন
+```bash
+npm run dev
+```
+ব্রাউজারে ভিজিট করুন: **`http://localhost:5173/`**
+
+### ৪. প্রোডাকশন বিল্ড তৈরি করতে
+```bash
+npm run build
+```
+
+---
+
+## 📄 লাইসেন্স
+MIT License © 2026 EduOne Coaching Management System
