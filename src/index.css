@@ -1244,7 +1244,7 @@ button, input, select, textarea, optgroup, div, span, p, h1, h2, h3, h4, h5, h6,
 /* Plan Cards (EduOne Plan Selector) */
 .plan-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
   margin-bottom: 24px;
 }

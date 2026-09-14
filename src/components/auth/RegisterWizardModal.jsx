@@ -34,7 +34,7 @@ export const RegisterWizardModal = () => {
   });
 
   // Step 3: Subscription Plan
-  const [selectedPlan, setSelectedPlan] = useState('standard');
+  const [selectedPlan, setSelectedPlan] = useState('trial');
 
   if (!isRegisterModalOpen) return null;
 
@@ -47,7 +47,13 @@ export const RegisterWizardModal = () => {
         phone: coachingData.phone || settings.phone,
         email: coachingData.email || settings.email,
         address: coachingData.address || settings.address,
-        currentPlan: selectedPlan === 'standard' ? 'Standard Plan (৳৩০০/মাসিক)' : 'Premium Plan (৳৫০০/মাসিক)'
+        currentPlan: selectedPlan === 'trial'
+          ? 'ফ্রি ট্রায়াল (১ মাস - ১০০ শিক্ষার্থী)'
+          : selectedPlan === 'standard'
+          ? 'Standard Plan (৳৩০০/মাসিক)'
+          : selectedPlan === 'premium'
+          ? 'Premium Plan (৳৫০০/মাসিক)'
+          : 'Basic Plan (৳২০০/মাসিক)'
       });
     }
 
@@ -57,6 +63,15 @@ export const RegisterWizardModal = () => {
   };
 
   const plans = [
+    {
+      id: 'trial',
+      name: 'ফ্রি ট্রায়াল',
+      price: '৳ ০',
+      period: '/১ মাস',
+      badge: '১ মাস ফ্রি 🎁',
+      students: '১০০ জন শিক্ষার্থী পর্যন্ত',
+      features: ['১ মাস সম্পূর্ণ ফ্রি ট্রায়াল', '১০০ জন শিক্ষার্থী পর্যন্ত', 'দৈনিক হাজিরা শিট', 'ফি রসিদ ও আইডি কার্ড', 'আনলিমিটেড ব্যাচ তৈরি']
+    },
     {
       id: 'basic',
       name: 'বেসিক প্ল্যান',
@@ -86,7 +101,7 @@ export const RegisterWizardModal = () => {
 
   return (
     <div className="modal-backdrop">
-      <div className="modal-content" style={{ maxWidth: '720px' }}>
+      <div className="modal-content" style={{ maxWidth: '860px' }}>
         <div className="modal-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <div className="brand-icon" style={{ width: '32px', height: '32px' }}>
