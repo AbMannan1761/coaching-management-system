@@ -2,20 +2,18 @@
    EduOne Coaching Management - Master Design System
    ========================================================================== */
 
-@import url('https://fonts.maateen.me/nikosh/font.css');
-
 @font-face {
   font-family: 'Nikosh';
   font-display: swap;
   font-style: normal;
   font-weight: 100 900;
   src: local('Nikosh'), local('NikoshBAN'),
-       url('/fonts/nikosh.ttf') format('truetype');
+       url('./assets/fonts/Nikosh.ttf') format('truetype');
 }
 
 :root {
   /* Color Tokens - Light Mode */
-  --font-family: 'Nikosh', 'NikoshBAN', 'Hind Siliguri', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: 'Nikosh', 'NikoshBAN', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   --primary-50: #EEF2FF;
   --primary-100: #E0E7FF;
@@ -140,7 +138,7 @@ html, body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-button, input, select, textarea, optgroup {
+button, input, select, textarea, optgroup, div, span, p, h1, h2, h3, h4, h5, h6, table, th, td, a {
   font-family: var(--font-family);
 }
 
