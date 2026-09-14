@@ -51,7 +51,7 @@ export const RegisterWizardModal = () => {
       });
     }
 
-    alert('অভিনন্দন! আপনার EduOne কোচিং প্ল্যাটফর্ম সফলভাবে নিবন্ধিত ও কনফিগার হয়েছে।');
+    alert('অভিনন্দন! আপনার ABM Info Tech কোচিং প্ল্যাটফর্ম সফলভাবে নিবন্ধিত ও কনফিগার হয়েছে।');
     setIsRegisterModalOpen(false);
     setCurrentStep(1);
   };
@@ -92,7 +92,7 @@ export const RegisterWizardModal = () => {
             <div className="brand-icon" style={{ width: '32px', height: '32px' }}>
               <Sparkles size={16} />
             </div>
-            <h3 style={{ fontSize: '1.2rem' }}>EduOne কোচিং রেজিস্ট্রেশন ও অনবোর্ডিং</h3>
+            <h3 style={{ fontSize: '1.2rem' }}>ABM Info Tech কোচিং রেজিস্ট্রেশন ও অনবোর্ডিং</h3>
           </div>
           <button className="modal-close-btn" onClick={() => setIsRegisterModalOpen(false)}>
             <X size={20} />

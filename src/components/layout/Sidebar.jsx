@@ -95,7 +95,7 @@ export const Sidebar = () => {
           </div>
           <div className="brand-text">
             <span className="brand-title">
-              Edu<span>One</span>
+              ABM <span>Info Tech</span>
             </span>
             <span className="brand-subtitle">{t('brandTagline')}</span>
           </div>
